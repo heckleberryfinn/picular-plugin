@@ -1,0 +1,14 @@
+{
+  "name": "picular-plugin-serve",
+  "tree": {
+    "$className": "DataModel",
+    "$ignoreUnknownInstances": true,
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "$ignoreUnknownInstances": true,
+      "PicularPlugin": {
+        "$path": "default.project.json"
+      }
+    }
+  }
+}

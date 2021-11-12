@@ -1,0 +1,35 @@
+name: Publish Canary
+on:
+  workflow_run:
+    workflows: ["Unit Tests"]
+    branches: [default]
+    types: [completed]
+
+jobs:
+  publish-release:
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success'
+    timeout-minutes: 5
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Setup Toolchain
+        uses: roblox/setup-foreman@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Report Tool Versions
+        shell: bash
+        run: foreman list
+
+      - name: Upload Release to Roblox (Canary)
+        shell: bash
+        run: |
+          find ./src -name "*.spec.lua" -type f -delete
+          rojo upload default.project.json --asset_id $ASSET_ID --cookie "$ROBLOSECURITY"
+        env:
+          ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
+          ASSET_ID: 5650402020

@@ -1,0 +1,9 @@
+*.rbxm*
+*.rbxl*
+
+roblox.toml
+testez.toml
+*.tsbuildinfo
+
+node_modules/
+*packages/

@@ -1,0 +1,27 @@
+{
+  "name": "picular-plugin-test",
+  "tree": {
+    "$className": "DataModel",
+    "TestService": {
+      "$className": "TestService",
+      "$properties": {
+        "ExecuteWithStudioRun": true
+      },
+      "PicularPlugin": {
+        "$path": "default.project.json"
+      },
+      "Packages": {
+        "$path": "modules"
+      },
+      "TestRunner": {
+        "$path": "test-runner.server.lua"
+      }
+    },
+    "Players": {
+      "$className": "Players",
+      "$properties": {
+        "CharacterAutoLoads": false
+      }
+    }
+  }
+}

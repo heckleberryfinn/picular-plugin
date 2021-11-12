@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PowerShell: Run Tests",
+      "type": "PowerShell",
+      "request": "launch",
+      "script": ".vscode/scripts/run-tests",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "PowerShell: Build+Install",
+      "type": "PowerShell",
+      "request": "launch",
+      "script": ".vscode/scripts/install",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

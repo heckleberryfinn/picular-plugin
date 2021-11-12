@@ -1,0 +1,14 @@
+[package]
+name = "csqrl/picular-plugin"
+description = "⚡ Lightning fast, feature-rich plugin for finding the perfect colour palettes; directly inside Roblox Studio"
+version = "1.0.0"
+license = "MIT"
+authors = ["csqrl (https://github.com/csqrl)"]
+registry = "https://github.com/upliftgames/wally-index"
+realm = "shared"
+
+[dependencies]
+Roact = "roblox/roact@^1.4.2"
+
+[place]
+shared-packages = ""
